@@ -1,10 +1,9 @@
 import { AuthConfig } from '@auth0/auth0-angular';
 
 export const authConfig: AuthConfig = {
-  domain: 'dev-zwfdbrdzvgpnlx7l.us.auth0.com',
-  clientId: 'GYFFTBm0pJO9AVX62W4OmTVFpBujto2E',
+  domain: 'YOUR_AUTH0_DOMAIN', // e.g., 'dev-xyz123.us.auth0.com'
+  clientId: 'YOUR_CLIENT_ID',
   authorizationParams: {
-    redirect_uri: window.location.origin,
-    prompt: 'login'
+    redirect_uri: window.location.origin
   }
 }; 
