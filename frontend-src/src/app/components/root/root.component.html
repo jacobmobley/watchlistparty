@@ -1,0 +1,11 @@
+<!-- src/app/pages/root/root.component.html -->
+
+<!-- If the user is authenticated, render HomeComponent -->
+<ng-container *ngIf="auth.isAuthenticated$ | async; else showLanding">
+  <app-home></app-home>
+</ng-container>
+
+<!-- Otherwise, show LandingComponent -->
+<ng-template #showLanding>
+  <app-landing></app-landing>
+</ng-template>

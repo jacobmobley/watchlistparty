@@ -1,9 +1,9 @@
 import { Routes } from '@angular/router';
-import { Landing } from './landing/landing';
+import { RootComponent } from './components/root/root.component';
 
 export const routes: Routes = [
   {
     path: '',
-    component: Landing
+    component: RootComponent
   }
 ];
