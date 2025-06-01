@@ -1,0 +1,18 @@
+<div *ngIf="isOpen" class="absolute inset-0 flex items-center backdrop-blur-sm justify-center z-[100]">
+  <div class="bg-white rounded-lg shadow-xl p-6 w-96">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-semibold">Settings</h2>
+      <button 
+        (click)="closeSettings()"
+        class="p-2 rounded-full hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors duration-200"
+        aria-label="Close settings">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+    <div class="text-center">
+      <p>Hello World</p>
+    </div>
+  </div>
+</div>

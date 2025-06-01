@@ -15,6 +15,9 @@ export const appConfig: ApplicationConfig = {
        AuthModule.forRoot({
          domain: environment.auth.domain,
          clientId: environment.auth.clientId,
+         authorizationParams: {
+          redirect_uri: window.location.origin
+        }
        })
      )
   ]

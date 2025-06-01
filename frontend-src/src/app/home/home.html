@@ -1,1 +1,24 @@
-<h1>Home</h1>
+<div class="flex h-screen">
+  <!-- Sidebar Button -->
+  <div [ngClass]="{'pointer-events-none filter blur-sm': isSettingsOpen}" class="p-4 z-40 transition-all duration-200">
+    <app-sidebar-button (sidebarToggle)="toggleSidebar()"></app-sidebar-button>
+  </div>
+
+  <!-- Sidebar -->
+  <app-sidebar 
+    [isOpen]="isSidebarOpen" 
+    (close)="toggleSidebar()"
+    (openSettings)="toggleSettings()">
+  </app-sidebar>
+
+  <!-- Main Content Area -->
+  <main class="flex-1 relative h-full">
+    <div class="relative h-full">
+      <app-maincontent></app-maincontent>
+      <app-settings 
+        [isOpen]="isSettingsOpen"
+        (close)="toggleSettings()">
+      </app-settings>
+    </div>
+  </main>
+</div>
