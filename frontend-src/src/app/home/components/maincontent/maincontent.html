@@ -1,22 +1,13 @@
-
-  <!-- Main Content Container -->
-  <div class="h-full p-4">
-    <div class="bg-white rounded-lg shadow-md p-6 h-full">
-      <h1 class="text-2xl font-bold mb-4">Dashboard</h1>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        <!-- Example content cards -->
-        <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
-          <h2 class="text-lg font-semibold mb-2">Recent Activity</h2>
-          <p class="text-gray-600">Your recent watch history and updates</p>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
-          <h2 class="text-lg font-semibold mb-2">Watch Parties</h2>
-          <p class="text-gray-600">Upcoming and active watch parties</p>
-        </div>
-        <div class="bg-gray-50 rounded-lg p-4 shadow-sm">
-          <h2 class="text-lg font-semibold mb-2">Recommendations</h2>
-          <p class="text-gray-600">Personalized content suggestions</p>
-        </div>
-      </div>
+<!-- Main Content Container -->
+<div class="h-full p-4">
+  <div class="bg-white rounded-lg shadow-md p-6 h-full">
+    <h1 class="text-2xl font-bold mb-4">Reccomendations</h1>
+    <div class="flex flex-wrap gap-6">
+      <app-titleslide 
+        *ngFor="let movie of movies"
+        [title]="movie.title"
+        [imageUrl]="movie.imageUrl">
+      </app-titleslide>
     </div>
   </div>
+</div>
